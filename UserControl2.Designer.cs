@@ -123,7 +123,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel8.BackgroundImage = global::contoh2.Properties.Resources.ayam_sambal;
+            this.panel8.BackgroundImage = global::Resto.Properties.Resources.ayam_sambal;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel8.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -178,7 +178,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel5.BackgroundImage = global::contoh2.Properties.Resources.nasi_goreng;
+            this.panel5.BackgroundImage = global::Resto.Properties.Resources.nasi_goreng;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Location = new System.Drawing.Point(2, 3);
@@ -231,7 +231,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel10.BackgroundImage = global::contoh2.Properties.Resources.ayam_bakar;
+            this.panel10.BackgroundImage = global::Resto.Properties.Resources.ayam_bakar;
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel10.Location = new System.Drawing.Point(2, 3);
@@ -284,7 +284,7 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel12.BackgroundImage = global::contoh2.Properties.Resources.nasi_bakar;
+            this.panel12.BackgroundImage = global::Resto.Properties.Resources.nasi_bakar;
             this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel12.Location = new System.Drawing.Point(2, 3);
@@ -337,7 +337,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.BackgroundImage = global::contoh2.Properties.Resources.ayam_geprek;
+            this.panel3.BackgroundImage = global::Resto.Properties.Resources.ayam_geprek;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Location = new System.Drawing.Point(2, 3);
@@ -399,7 +399,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.BackgroundImage = global::contoh2.Properties.Resources.ayam_rica1;
+            this.panel1.BackgroundImage = global::Resto.Properties.Resources.ayam_rica1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Location = new System.Drawing.Point(2, 3);

@@ -94,7 +94,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.BackgroundImage = global::contoh2.Properties.Resources.milo;
+            this.panel1.BackgroundImage = global::Resto.Properties.Resources.milo;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Location = new System.Drawing.Point(2, 3);
@@ -194,7 +194,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.BackgroundImage = global::contoh2.Properties.Resources.taro;
+            this.panel3.BackgroundImage = global::Resto.Properties.Resources.taro;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Location = new System.Drawing.Point(2, 3);
@@ -237,7 +237,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel5.BackgroundImage = global::contoh2.Properties.Resources.ice_cream;
+            this.panel5.BackgroundImage = global::Resto.Properties.Resources.ice_cream;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Location = new System.Drawing.Point(2, 3);
@@ -280,7 +280,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel8.BackgroundImage = global::contoh2.Properties.Resources.sanger;
+            this.panel8.BackgroundImage = global::Resto.Properties.Resources.sanger;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel8.Location = new System.Drawing.Point(2, 3);
@@ -323,7 +323,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel10.BackgroundImage = global::contoh2.Properties.Resources.redvelvet;
+            this.panel10.BackgroundImage = global::Resto.Properties.Resources.redvelvet;
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel10.Location = new System.Drawing.Point(2, 3);
@@ -366,7 +366,7 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel12.BackgroundImage = global::contoh2.Properties.Resources.capucino_blend;
+            this.panel12.BackgroundImage = global::Resto.Properties.Resources.capucino_blend;
             this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel12.Location = new System.Drawing.Point(2, 3);

@@ -16,5 +16,10 @@ namespace contoh2
         {
             InitializeComponent();
         }
+
+        private void UserControl3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
