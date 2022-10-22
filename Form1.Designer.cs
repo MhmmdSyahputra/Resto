@@ -43,7 +43,7 @@
             this.label_takeaway = new System.Windows.Forms.Label();
             this.input_jumlah = new System.Windows.Forms.NumericUpDown();
             this.label_jumlah = new System.Windows.Forms.Label();
-            this.diskonmember = new contoh2.UserControl3();
+            this.diskonmember = new contoh2.pageDiskon();
             this.nonmember_option = new System.Windows.Forms.RadioButton();
             this.member_option = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
@@ -55,8 +55,8 @@
             this.MinumanOption = new System.Windows.Forms.RadioButton();
             this.MakananOption = new System.Windows.Forms.RadioButton();
             this.label_pilih = new System.Windows.Forms.Label();
-            this.foodpage = new contoh2.UserControl2();
-            this.drinkpage = new contoh2.UserControl1();
+            this.foodpage = new contoh2.pageFoods();
+            this.drinkpage = new contoh2.pageDrink();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_jumlah)).BeginInit();
@@ -413,8 +413,8 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private Label label_pilih;
-        private UserControl2 foodpage;
-        private UserControl1 drinkpage;
+        private pageFoods foodpage;
+        private pageDrink drinkpage;
         private RadioButton MinumanOption;
         private RadioButton MakananOption;
         private Label label_note;
@@ -425,7 +425,7 @@
         private ComboBox input_takeaway;
         private RadioButton nonmember_option;
         private RadioButton member_option;
-        private UserControl3 diskonmember;
+        private pageDiskon diskonmember;
         private NumericUpDown input_jumlah;
         private Label label_jumlah;
         private Label label_takeaway;

@@ -1,6 +1,6 @@
 ﻿namespace contoh2
 {
-    partial class UserControl2
+    partial class pageFoods
     {
         /// <summary> 
         /// Required designer variable.

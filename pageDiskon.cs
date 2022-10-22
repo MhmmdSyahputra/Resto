@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace contoh2
 {
-    public partial class diskoninput : UserControl
+    public partial class pageDiskon : UserControl
     {
-        public diskoninput()
+        public pageDiskon()
         {
             InitializeComponent();
+        }
+
+        private void UserControl3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
