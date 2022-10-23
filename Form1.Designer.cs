@@ -57,9 +57,12 @@
             this.label_pilih = new System.Windows.Forms.Label();
             this.foodpage = new contoh2.pageFoods();
             this.drinkpage = new contoh2.pageDrink();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_jumlah)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label_outlit
@@ -144,6 +147,7 @@
             this.input_nama.PlaceholderText = "Nama Anda..";
             this.input_nama.Size = new System.Drawing.Size(183, 23);
             this.input_nama.TabIndex = 10;
+            this.input_nama.TextChanged += new System.EventHandler(this.input_nama_TextChanged);
             // 
             // input_alamat
             // 
@@ -373,11 +377,34 @@
             this.drinkpage.Size = new System.Drawing.Size(339, 307);
             this.drinkpage.TabIndex = 16;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(794, 172);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(391, 271);
+            this.dataGridView1.TabIndex = 18;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(807, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 28);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Menu Antrian";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 618);
+            this.ClientSize = new System.Drawing.Size(1197, 611);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
@@ -394,6 +421,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_jumlah)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,5 +457,7 @@
         private NumericUpDown input_jumlah;
         private Label label_jumlah;
         private Label label_takeaway;
+        private DataGridView dataGridView1;
+        private Label label1;
     }
 }
