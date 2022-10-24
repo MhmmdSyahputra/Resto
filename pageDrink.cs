@@ -61,5 +61,38 @@ namespace contoh2
         {
 
         }
+
+        private void pageDrink_Load(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable("table");
+
+            //string[] milo = new String[] { "img", "Milo", "15.000" };
+            //string[] taro = new String[] { "img", "Taro", "16.000" };
+            //string[] ice_cream = new String[] { "img", "Ice Cream", "15.000" };
+            //string[] capucino_blend = new String[] { "img", "Capucino Blend", "25.000" };
+            //string[] red_velvet = new String[] { "img", "Red Velvet", "20.000" };
+            //string[] Sanger = new String[] { "img", "Sanger", "20.000" };
+
+            string[] arr1 = new String[] { "a", "b", "c" };
+
+            string[] arr2 = new String[] { "d", "e", "f" };
+
+            dt.Columns.Add("img", Type.GetType("System.String"));
+            dt.Columns.Add("nama", Type.GetType("System.String"));
+            
+
+            //DataRow row;
+            //var numberOfRows = 3;
+            //for (int i = 0; i < numberOfRows; i++)
+            //{
+            //    row = dt.NewRow();
+            //    if (i < arr1.Length)
+            //        row["Column1"] = arr1[i];
+            //    if (i < arr2.Length)
+            //        row["Column2"] = arr2[i];
+            //    dt.Rows.Add(row);
+            //}
+
+        }
     }
 }

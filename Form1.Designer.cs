@@ -55,20 +55,20 @@
             this.MinumanOption = new System.Windows.Forms.RadioButton();
             this.MakananOption = new System.Windows.Forms.RadioButton();
             this.label_pilih = new System.Windows.Forms.Label();
-            this.foodpage = new contoh2.pageFoods();
-            this.drinkpage = new contoh2.pageDrink();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.tablefoods = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_jumlah)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablefoods)).BeginInit();
             this.SuspendLayout();
             // 
             // label_outlit
             // 
             this.label_outlit.AutoSize = true;
-            this.label_outlit.Location = new System.Drawing.Point(416, 110);
+            this.label_outlit.Location = new System.Drawing.Point(416, 74);
             this.label_outlit.Name = "label_outlit";
             this.label_outlit.Size = new System.Drawing.Size(84, 15);
             this.label_outlit.TabIndex = 1;
@@ -83,7 +83,7 @@
             "Binjai",
             "Karya",
             "Brayan"});
-            this.input_outlit.Location = new System.Drawing.Point(506, 107);
+            this.input_outlit.Location = new System.Drawing.Point(506, 71);
             this.input_outlit.Name = "input_outlit";
             this.input_outlit.Size = new System.Drawing.Size(121, 23);
             this.input_outlit.TabIndex = 3;
@@ -94,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(311, 9);
+            this.label2.Location = new System.Drawing.Point(527, -5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(205, 37);
             this.label2.TabIndex = 4;
@@ -105,7 +105,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(52, 51);
+            this.label3.Location = new System.Drawing.Point(58, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 32);
             this.label3.TabIndex = 5;
@@ -174,7 +174,7 @@
             this.groupBox1.Controls.Add(this.input_nohp);
             this.groupBox1.Controls.Add(this.label_nohp);
             this.groupBox1.Controls.Add(this.input_nama);
-            this.groupBox1.Location = new System.Drawing.Point(52, 110);
+            this.groupBox1.Location = new System.Drawing.Point(52, 93);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(286, 170);
             this.groupBox1.TabIndex = 13;
@@ -198,9 +198,9 @@
             this.groupBox2.Controls.Add(this.MinumanOption);
             this.groupBox2.Controls.Add(this.MakananOption);
             this.groupBox2.Controls.Add(this.label_pilih);
-            this.groupBox2.Location = new System.Drawing.Point(416, 140);
+            this.groupBox2.Location = new System.Drawing.Point(416, 104);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(372, 453);
+            this.groupBox2.Size = new System.Drawing.Size(372, 367);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Menu";
@@ -301,7 +301,7 @@
             // 
             this.submit.BackColor = System.Drawing.Color.DodgerBlue;
             this.submit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.submit.Location = new System.Drawing.Point(209, 344);
+            this.submit.Location = new System.Drawing.Point(202, 323);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(144, 39);
             this.submit.TabIndex = 22;
@@ -361,56 +361,50 @@
             this.label_pilih.TabIndex = 15;
             this.label_pilih.Text = "Pilih";
             // 
-            // foodpage
-            // 
-            this.foodpage.BackColor = System.Drawing.Color.Transparent;
-            this.foodpage.Location = new System.Drawing.Point(52, 286);
-            this.foodpage.Name = "foodpage";
-            this.foodpage.Size = new System.Drawing.Size(339, 307);
-            this.foodpage.TabIndex = 17;
-            this.foodpage.Load += new System.EventHandler(this.foodpage_Load);
-            // 
-            // drinkpage
-            // 
-            this.drinkpage.Location = new System.Drawing.Point(52, 286);
-            this.drinkpage.Name = "drinkpage";
-            this.drinkpage.Size = new System.Drawing.Size(339, 307);
-            this.drinkpage.TabIndex = 16;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(794, 172);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 269);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(391, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(391, 306);
             this.dataGridView1.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(807, 129);
+            this.label1.Location = new System.Drawing.Point(176, 274);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 28);
+            this.label1.Size = new System.Drawing.Size(56, 28);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Menu Antrian";
+            this.label1.Text = "Bukti";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // tablefoods
+            // 
+            this.tablefoods.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tablefoods.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tablefoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablefoods.Location = new System.Drawing.Point(801, 98);
+            this.tablefoods.Name = "tablefoods";
+            this.tablefoods.RowTemplate.Height = 25;
+            this.tablefoods.Size = new System.Drawing.Size(384, 513);
+            this.tablefoods.TabIndex = 20;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 611);
+            this.ClientSize = new System.Drawing.Size(1197, 623);
+            this.Controls.Add(this.tablefoods);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.drinkpage);
-            this.Controls.Add(this.foodpage);
             this.Controls.Add(this.input_outlit);
             this.Controls.Add(this.label_outlit);
             this.Name = "Form1";
@@ -422,6 +416,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_jumlah)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablefoods)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,8 +436,6 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private Label label_pilih;
-        private pageFoods foodpage;
-        private pageDrink drinkpage;
         private RadioButton MinumanOption;
         private RadioButton MakananOption;
         private Label label_note;
@@ -459,5 +452,6 @@
         private Label label_takeaway;
         private DataGridView dataGridView1;
         private Label label1;
+        private DataGridView tablefoods;
     }
 }
