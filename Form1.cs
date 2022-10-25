@@ -1,6 +1,9 @@
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using System.Globalization;
+using System.Reflection.Emit;
 
 namespace contoh2
 {
@@ -14,33 +17,12 @@ namespace contoh2
         {
             InitializeComponent();
 
-            
-            //imgcol.HeaderText = "Gambar";
-            //imgcol.Name = "Gambar";
-            //imgcol2.Name = "a";
-            //imgcol3.Name = "ambar";
-            //Image image = Image.FromFile(path);
-            //imgcol.Image = image;
-            //tablefoods.Columns.Add(imgcol);
-            //tablefoods.Columns.Add(imgcol);
-            //tablefoods.Columns.Add(imgcol);
-
-
-            //tablefoods.ColumnCount = 3;
-            //tablefoods.Columns[0].Name = "img";
-            //tablefoods.Columns[1].Name = "Nama";
-            //tablefoods.Columns[2].Name = "Harga";
-            //
-            //
-            //  
-            //tablefoods.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
         }
         string menunya;
 
         private void Datamakanan()
         {
-
+            //bersih kan semua table
             tablefoods.Rows.Clear();
             tablefoods.Columns.Clear();
 
@@ -70,53 +52,44 @@ namespace contoh2
             Image gambar = Image.FromFile("C:\\img\\ayam-rica.JPG");
             string namafoods = "Ayam Rica";
             int price = 20000;
-            Object[] row = new object[] { gambar, namafoods, $"Rp. {price}" };
+            Object[] row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 2
             gambar = Image.FromFile("C:\\img\\ayam-geprek.JPG");
             namafoods = "Ayam Geprek";
             price = 15000;
-            row = new object[] { gambar, namafoods, $"Rp. {price}" };
+            row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 3
             gambar = Image.FromFile("C:\\img\\nasi-goreng.JPG");
             namafoods = "Nasi Goreng";
             price = 15000;
-            row = new object[] { gambar, namafoods, $"Rp. {price}" };
+            row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 4
             gambar = Image.FromFile("C:\\img\\nasi-bakar.JPG");
             namafoods = "Nasi Bakar";
             price = 25000;
-            row = new object[] { gambar, namafoods, $"Rp. {price}" };
+            row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 5
             gambar = Image.FromFile("C:\\img\\ayam-sambal.JPG");
             namafoods = "Ayam Sambal";
             price = 15000;
-            row = new object[] { gambar, namafoods, $"Rp. {price}" };
+            row = new object[] { gambar, namafoods, $"{price}" };
+            tablefoods.Rows.Add(row);
+            
+            //data 6
+            gambar = Image.FromFile("C:\\img\\ayam-bakar.JPG");
+            namafoods = "Ayam Bakar";
+            price = 18000;
+            row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
           
-             
-          
-            
-
-            //row = new[] {$"{image1}","ayam Bakar","Rp. 17.000"};
-            //tablefoods.Rows.Add(row);
-            //
-            //row = new[] {"gambar ayam Geprek","ayam Geprel","Rp. 18.000"};
-            //tablefoods.Rows.Add(row);
-            //
-            //row = new[] {"gambar ayam Sambal","ayam Sambal","Rp. 20.000"};
-            //tablefoods.Rows.Add(row);
-            //
-            //row = new[] {"gambar ayam rica","ayam Rica","Rp. 15.000"};
-            //tablefoods.Rows.Add(row);
-
             
 
         } 
@@ -126,9 +99,8 @@ namespace contoh2
             tablefoods.Rows.Clear();
             tablefoods.Columns.Clear();
 
-            DataGridViewImageColumn img = new DataGridViewImageColumn();
-
             //Create Name column/Field 
+            DataGridViewImageColumn img = new DataGridViewImageColumn();
             img.Name = "gambar";
             img.ImageLayout = DataGridViewImageCellLayout.Stretch; //width=100%
             
@@ -152,75 +124,58 @@ namespace contoh2
             Image gambar = Image.FromFile("C:\\img\\milo.JPG");
             string namafoods = "Milo Dingin";
             int price = 15000;
-            Object[] row = new object[] { gambar, namafoods, $"Rp. {price}" };
+            Object[] row = new object[] { gambar, namafoods, price };
             tablefoods.Rows.Add(row);
 
             //data 2
             gambar = Image.FromFile("C:\\img\\taro.JPG");
             namafoods = "Taro";
             price = 16000;
-            row = new object[] { gambar, namafoods, $"Rp. {price}" };
+            row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 3
             gambar = Image.FromFile("C:\\img\\ice-cream.JPG");
             namafoods = "Ice Cream";
             price = 15000;
-            row = new object[] { gambar, namafoods, $"Rp. {price}" };
+            row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 4
             gambar = Image.FromFile("C:\\img\\capucino-blend.JPG");
             namafoods = "Capucino Bleand";
             price = 25000;
-            row = new object[] { gambar, namafoods, $"Rp. {price}" };
+            row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 5
             gambar = Image.FromFile("C:\\img\\redvelvet.JPG");
             namafoods = "Red velvet";
             price = 15000;
-            row = new object[] { gambar, namafoods, $"Rp. {price}" };
+            row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
-
-            //tablefoods.Rows.Clear();
-            //string[] row ={$"gambar Taro{menunya}","Taro","Rp. 15.000"};
-            //tablefoods.Rows.Add(row);
-            //
-            //row = new[] {"gambar Milo","Milo","Rp. 17.000"};
-            //tablefoods.Rows.Add(row);
-            //
-            //row = new[] {"gambar Sanger","Sanger","Rp. 18.000"};
-            //tablefoods.Rows.Add(row);
-            //
-            //row = new[] {"gambar Red Velvet","Redvelvet","Rp. 20.000"};
-            //tablefoods.Rows.Add(row);
-            //
-            //row = new[] {"gambar Macha","Macha","Rp. 15.000"};
-            //tablefoods.Rows.Add(row);
+            
+            //data 6
+            gambar = Image.FromFile("C:\\img\\sanger.JPG");
+            namafoods = "Sanger";
+            price = 15000;
+            row = new object[] { gambar, namafoods, $"{price}" };
+            tablefoods.Rows.Add(row);
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+            box_toping.Enabled = true;
 
-            if (menunya == "makanan")
-            {
-                
-            }else if(menunya == "minuman")
-            {
+            Dataminuman();
 
-            }
-            //FillData();
-            table.Columns.Add("---Struk---", Type.GetType("System.String"));
-            table.Columns.Add("p", Type.GetType("System.String"));
-            //table.Columns.Add("Alamat", Type.GetType("System.String"));
+            table.Columns.Add("    GEPREK NAMPOL ", Type.GetType("System.String"));
+            table.Columns.Add(" ", Type.GetType("System.String"));
             dataGridView1.DataSource = table;
 
-            //drinkpage.Hide();
-            //foodpage.Hide();
-            diskonmember.Hide();
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -265,43 +220,55 @@ namespace contoh2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //drinkpage.Hide();
-
-            //foodpage.Show();
-
-            //foodpage.BringToFront();
+           
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //foodpage.Hide();
 
-            //drinkpage.Show();
-
-            //drinkpage.BringToFront();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             Datamakanan();
-            menunya = "makanan";
-            //drinkpage.Hide();
+            string makanan = MakananOption.Text.ToString(); ;
 
-            //foodpage.Show();
+            //jika checkbox yg dipilih makanan maka
+            if (makanan == "Makanan")
+            {
+                //box toping disabled
+                box_toping.Enabled = false;
 
-            //foodpage.BringToFront();
+                //box makanan enabled
+                box_makanan.Enabled = true;
+
+                //and value checkbox set empty
+                topingcheck1.Checked = false;
+                topingcheck2.Checked = false;
+                topingcheck3.Checked = false;
+            }
+            
         }
 
         private void MinumanOption_CheckedChanged(object sender, EventArgs e)
         {
+            string minuman = MinumanOption.Text.ToString(); 
             Dataminuman();
-            menunya = "minuman";
-            //foodpage.Hide();
 
-            //drinkpage.Show();
+            //jika checkbox yg dipilih minuman maka
+            if (minuman == "Minuman")
+            {
+                //box makanan disabled
+                box_makanan.Enabled = false;
 
-            //drinkpage.BringToFront();
+                //box toping enabled
+                box_toping.Enabled = true;
+
+                //and value input level set 0
+                input_lvl_makanan.Value = 0;
+            }
+            
         }
 
         private void foodpage_Load(object sender, EventArgs e)
@@ -320,27 +287,82 @@ namespace contoh2
             //kosongkan dahulu
             table.Rows.Clear();
 
-            //lalu isi dengan data baru
+            //jika button pn click muncul popup
+            MessageBox.Show("Makanan Berhasil Dipesan!");
+
+            //mengecek satu persatu isi dari checkbox apakah di pilih atau tidak
+            //jika dipilih simpan value nya
+            string toping1 = "";
+            if (topingcheck1.CheckState == CheckState.Checked)
+            {
+                toping1 += "Boba";
+            }
+
+            string toping2 = "";
+            if (topingcheck2.CheckState == CheckState.Checked)
+            {
+                toping2 += "Keju";
+            }
+
+            string toping3 = "";
+            if (topingcheck3.CheckState == CheckState.Checked)
+            {
+                toping3 += "Seres";
+            }
+
+            //membuat data baru/field
             table.Rows.Add("Nama ", input_nama.Text);
             table.Rows.Add("No Hp ", input_nohp.Text);
             table.Rows.Add("Alamat ", input_alamat.Text);
+            table.Rows.Add("Order ", input_takeaway.Text);
 
-            table.Rows.Add("", "");
+            table.Rows.Add("-------------------", "-------------------");
 
-            table.Rows.Add("Menu ", "Nasi Goreng");
+            //add row nama item
+            table.Rows.Add("Menu ", name_input_item_select.Text);
+
+            string minuman = MinumanOption.Text.ToString();
+            string makanan = MakananOption.Text.ToString();
+            //jika yg dipilih minuman berarti toping terisi
+            if (minuman == "Minuman")
+            {
+            table.Rows.Add("Toping ", $"{toping1} {toping2} {toping3}");
+             
+            }
+
+            //jika yg dipilih makanan berarti level terisi
+            if (makanan == "Makanan")
+            {
+                table.Rows.Add("Level ", input_lvl_makanan.Text);
+            }
+            //add row jumlah item
             table.Rows.Add("Jumlah ", input_jumlah.Text);
-            table.Rows.Add("Harga ", "Rp 15.000");
+
+            //add row harga item
+            table.Rows.Add("Harga/Item ", String.Format(CultureInfo.CreateSpecificCulture("id-id"), "Rp. {0:N0}", harga_input_item_select.Text));
             int pajak = 1500 * Int16.Parse(input_jumlah.Text);
-            int total = 15000 * Int16.Parse(input_jumlah.Text) + pajak;
-            table.Rows.Add("Pajak ", pajak);
-            table.Rows.Add("Total ", $"RP. {total}");
+            int total = Int16.Parse(harga_input_item_select.Text) * Int16.Parse(input_jumlah.Text) + pajak;
+
+            //add row pajak
+            table.Rows.Add("Pajak ", String.Format(CultureInfo.CreateSpecificCulture("id-id"), "Rp. {0:N0}", pajak));
+
+            int diskon = total * Int16.Parse(input_diskon.Text) / 100;
+            //add row diskon
+            table.Rows.Add("Diskon ", String.Format(CultureInfo.CreateSpecificCulture("id-id"), "Rp. {0:N0}", diskon));
+            
+            //add row total bayar
+            table.Rows.Add("Total ", String.Format(CultureInfo.CreateSpecificCulture("id-id"), "Rp. {0:N0}", total));
+            
+            //add row total bayar potong diskon
+            table.Rows.Add("Total Dengan Diskon ", String.Format(CultureInfo.CreateSpecificCulture("id-id"), "Rp. {0:N0}", total-diskon));
 
             //kosongkan input
             input_nama.Text = String.Empty;
             input_nohp.Text = String.Empty;
             input_alamat.Text = String.Empty;
 
-
+            makanan = "";
+            minuman = "";
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -365,14 +387,28 @@ namespace contoh2
 
         private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
         {
-            diskonmember.Show();
+            string member = member_option.Text.ToString(); ;
 
-            diskonmember.BringToFront();
+            //jika radiobtn yg dipilikh member
+            if (member == "Member")
+            {
+                //maka panel member enabled
+                panel_member.Enabled = true;
+            }
         }
 
         private void radioButton1_CheckedChanged_2(object sender, EventArgs e)
         {
-            diskonmember.Hide();
+            string nonmember = nonmember_option.Text.ToString(); ;
+
+            //jika radiobtn yg dipilikh non-member
+            if (nonmember == "Non_Member")
+            {
+                //maka panel member disabled
+                panel_member.Enabled = false;
+                //and value textbox set 0
+                input_diskon.Value = 0;
+            }
         }
 
         private void diskonmember_Load(object sender, EventArgs e)
@@ -395,6 +431,53 @@ namespace contoh2
 
         }
 
-       
+        private void tablefoods_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //jika table di select atau dipilih atau data nya ada/tidak kosong
+            if (tablefoods.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                //jika table yg dipilih true
+                tablefoods.CurrentRow.Selected = true;
+
+                //maka simpan masing masing nilai nya
+                name_input_item_select.Text = tablefoods.Rows[e.RowIndex].Cells["nama"].FormattedValue.ToString();
+                harga_input_item_select.Text = tablefoods.Rows[e.RowIndex].Cells["harga"].FormattedValue.ToString();
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void harga_item_select_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void box_toping_Enter(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
