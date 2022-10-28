@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Reflection.Emit;
+using Resto.Properties;
 
 namespace contoh2
 {
@@ -49,50 +50,50 @@ namespace contoh2
             tablefoods.AllowUserToAddRows = false;
 
             //data 1
-            Image gambar = Image.FromFile("C:\\img\\ayam-rica.JPG");
+            Image gambar = Resources.ayam_rica;
             string namafoods = "Ayam Rica";
             int price = 20000;
             Object[] row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 2
-            gambar = Image.FromFile("C:\\img\\ayam-geprek.JPG");
+            gambar = Resources.ayam_geprek;
             namafoods = "Ayam Geprek";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 3
-            gambar = Image.FromFile("C:\\img\\nasi-goreng.JPG");
+            gambar = Resources.nasi_goreng;
             namafoods = "Nasi Goreng";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 4
-            gambar = Image.FromFile("C:\\img\\nasi-bakar.JPG");
+            gambar = Resources.nasi_bakar;
             namafoods = "Nasi Bakar";
             price = 25000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 5
-            gambar = Image.FromFile("C:\\img\\ayam-sambal.JPG");
+            gambar = Resources.ayam_sambal;
             namafoods = "Ayam Sambal";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
-            
+
             //data 6
-            gambar = Image.FromFile("C:\\img\\ayam-bakar.JPG");
+            gambar = Resources.ayam_bakar;
             namafoods = "Ayam Bakar";
             price = 18000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
-          
-            
 
-        } 
+
+
+        }
         private void Dataminuman()
         {
             //bersih kan semua table
@@ -103,7 +104,7 @@ namespace contoh2
             DataGridViewImageColumn img = new DataGridViewImageColumn();
             img.Name = "gambar";
             img.ImageLayout = DataGridViewImageCellLayout.Stretch; //width=100%
-            
+
             DataGridViewTextBoxColumn nama = new DataGridViewTextBoxColumn();
             nama.Name = "Nama";
 
@@ -121,42 +122,42 @@ namespace contoh2
             tablefoods.AllowUserToAddRows = false;
 
             //data 1
-            Image gambar = Image.FromFile("C:\\img\\milo.JPG");
+            Image gambar = Resources.milo;
             string namafoods = "Milo Dingin";
             int price = 15000;
             Object[] row = new object[] { gambar, namafoods, price };
             tablefoods.Rows.Add(row);
 
             //data 2
-            gambar = Image.FromFile("C:\\img\\taro.JPG");
+            gambar = Resources.taro;
             namafoods = "Taro";
             price = 16000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 3
-            gambar = Image.FromFile("C:\\img\\ice-cream.JPG");
+            gambar = Resources.ice_cream;
             namafoods = "Ice Cream";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 4
-            gambar = Image.FromFile("C:\\img\\capucino-blend.JPG");
+            gambar = Resources.capucino_blend;
             namafoods = "Capucino Bleand";
             price = 25000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 5
-            gambar = Image.FromFile("C:\\img\\redvelvet.JPG");
+            gambar = Resources.redvelvet;
             namafoods = "Red velvet";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
-            
+
             //data 6
-            gambar = Image.FromFile("C:\\img\\sanger.JPG");
+            gambar = Resources.sanger;
             namafoods = "Sanger";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
@@ -166,7 +167,7 @@ namespace contoh2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
             box_toping.Enabled = true;
 
             Dataminuman();
@@ -175,7 +176,7 @@ namespace contoh2
             table.Columns.Add(" ", Type.GetType("System.String"));
             dataGridView1.DataSource = table;
 
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -220,7 +221,7 @@ namespace contoh2
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -248,12 +249,12 @@ namespace contoh2
                 topingcheck2.Checked = false;
                 topingcheck3.Checked = false;
             }
-            
+
         }
 
         private void MinumanOption_CheckedChanged(object sender, EventArgs e)
         {
-            string minuman = MinumanOption.Text.ToString(); 
+            string minuman = MinumanOption.Text.ToString();
             Dataminuman();
 
             //jika checkbox yg dipilih minuman maka
@@ -268,7 +269,7 @@ namespace contoh2
                 //and value input level set 0
                 input_lvl_makanan.Value = 0;
             }
-            
+
         }
 
         private void foodpage_Load(object sender, EventArgs e)
@@ -283,6 +284,12 @@ namespace contoh2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
+            if(name_input_item_select.Text == String.Empty)
+            {
+                MessageBox.Show("Pilih menu yang valid");
+                return;
+            }
 
             //kosongkan dahulu
             table.Rows.Clear();
@@ -326,8 +333,8 @@ namespace contoh2
             //jika yg dipilih minuman berarti toping terisi
             if (minuman == "Minuman")
             {
-            table.Rows.Add("Toping ", $"{toping1} {toping2} {toping3}");
-             
+                table.Rows.Add("Toping ", $"{toping1} {toping2} {toping3}");
+
             }
 
             //jika yg dipilih makanan berarti level terisi
@@ -349,12 +356,12 @@ namespace contoh2
             int diskon = total * Int16.Parse(input_diskon.Text) / 100;
             //add row diskon
             table.Rows.Add("Diskon ", String.Format(CultureInfo.CreateSpecificCulture("id-id"), "Rp. {0:N0}", diskon));
-            
+
             //add row total bayar
             table.Rows.Add("Total ", String.Format(CultureInfo.CreateSpecificCulture("id-id"), "Rp. {0:N0}", total));
-            
+
             //add row total bayar potong diskon
-            table.Rows.Add("Total Dengan Diskon ", String.Format(CultureInfo.CreateSpecificCulture("id-id"), "Rp. {0:N0}", total-diskon));
+            table.Rows.Add("Total Dengan Diskon ", String.Format(CultureInfo.CreateSpecificCulture("id-id"), "Rp. {0:N0}", total - diskon));
 
             //kosongkan input
             input_nama.Text = String.Empty;
@@ -472,12 +479,12 @@ namespace contoh2
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void box_toping_Enter(object sender, EventArgs e)
         {
-           
+
         }
     }
 }
