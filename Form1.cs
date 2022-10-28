@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Reflection.Emit;
+using Resto.Properties;
 
 namespace contoh2
 {
@@ -49,42 +50,42 @@ namespace contoh2
             tablefoods.AllowUserToAddRows = false;
 
             //data 1
-            Image gambar = Image.FromFile("C:\\img\\ayam-rica.JPG");
+            Image gambar = Resources.ayam_rica;
             string namafoods = "Ayam Rica";
             int price = 20000;
             Object[] row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 2
-            gambar = Image.FromFile("C:\\img\\ayam-geprek.JPG");
+            gambar = Resources.ayam_geprek;
             namafoods = "Ayam Geprek";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 3
-            gambar = Image.FromFile("C:\\img\\nasi-goreng.JPG");
+            gambar = Resources.nasi_goreng;
             namafoods = "Nasi Goreng";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 4
-            gambar = Image.FromFile("C:\\img\\nasi-bakar.JPG");
+            gambar = Resources.nasi_bakar;
             namafoods = "Nasi Bakar";
             price = 25000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 5
-            gambar = Image.FromFile("C:\\img\\ayam-sambal.JPG");
+            gambar = Resources.ayam_sambal;
             namafoods = "Ayam Sambal";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
             
             //data 6
-            gambar = Image.FromFile("C:\\img\\ayam-bakar.JPG");
+            gambar = Resources.ayam_bakar;
             namafoods = "Ayam Bakar";
             price = 18000;
             row = new object[] { gambar, namafoods, $"{price}" };
@@ -121,42 +122,42 @@ namespace contoh2
             tablefoods.AllowUserToAddRows = false;
 
             //data 1
-            Image gambar = Image.FromFile("C:\\img\\milo.JPG");
+            Image gambar = Resources.milo;
             string namafoods = "Milo Dingin";
             int price = 15000;
             Object[] row = new object[] { gambar, namafoods, price };
             tablefoods.Rows.Add(row);
 
             //data 2
-            gambar = Image.FromFile("C:\\img\\taro.JPG");
+            gambar = Resources.taro;
             namafoods = "Taro";
             price = 16000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 3
-            gambar = Image.FromFile("C:\\img\\ice-cream.JPG");
+            gambar = Resources.ice_cream;
             namafoods = "Ice Cream";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 4
-            gambar = Image.FromFile("C:\\img\\capucino-blend.JPG");
+            gambar = Resources.capucino_blend;
             namafoods = "Capucino Bleand";
             price = 25000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
 
             //data 5
-            gambar = Image.FromFile("C:\\img\\redvelvet.JPG");
+            gambar = Resources.redvelvet;
             namafoods = "Red velvet";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
             tablefoods.Rows.Add(row);
             
             //data 6
-            gambar = Image.FromFile("C:\\img\\sanger.JPG");
+            gambar = Resources.sanger;
             namafoods = "Sanger";
             price = 15000;
             row = new object[] { gambar, namafoods, $"{price}" };
@@ -387,7 +388,7 @@ namespace contoh2
 
         private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
         {
-            string member = member_option.Text.ToString(); ;
+            string member = member_option.Text.ToString(); 
 
             //jika radiobtn yg dipilikh member
             if (member == "Member")
@@ -478,6 +479,11 @@ namespace contoh2
         private void box_toping_Enter(object sender, EventArgs e)
         {
            
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

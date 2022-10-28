@@ -73,6 +73,7 @@
             this.topingcheck1 = new System.Windows.Forms.CheckBox();
             this.box_toping = new System.Windows.Forms.GroupBox();
             this.box_makanan = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -85,14 +86,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.input_lvl_makanan)).BeginInit();
             this.box_toping.SuspendLayout();
             this.box_makanan.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_outlit
             // 
             this.label_outlit.AutoSize = true;
+            this.label_outlit.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label_outlit.Location = new System.Drawing.Point(416, 74);
             this.label_outlit.Name = "label_outlit";
-            this.label_outlit.Size = new System.Drawing.Size(84, 15);
+            this.label_outlit.Size = new System.Drawing.Size(88, 15);
             this.label_outlit.TabIndex = 1;
             this.label_outlit.Text = "Outlit Terdekat";
             this.label_outlit.Click += new System.EventHandler(this.label1_Click);
@@ -115,8 +118,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Navy;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(527, -5);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(499, -2);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(205, 37);
             this.label2.TabIndex = 4;
@@ -138,7 +143,7 @@
             this.label_nama.AutoSize = true;
             this.label_nama.Location = new System.Drawing.Point(6, 30);
             this.label_nama.Name = "label_nama";
-            this.label_nama.Size = new System.Drawing.Size(39, 15);
+            this.label_nama.Size = new System.Drawing.Size(44, 17);
             this.label_nama.TabIndex = 7;
             this.label_nama.Text = "Nama";
             this.label_nama.Click += new System.EventHandler(this.label5_Click);
@@ -146,24 +151,27 @@
             // label_alamat
             // 
             this.label_alamat.AutoSize = true;
+            this.label_alamat.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label_alamat.Location = new System.Drawing.Point(6, 104);
             this.label_alamat.Name = "label_alamat";
-            this.label_alamat.Size = new System.Drawing.Size(45, 15);
+            this.label_alamat.Size = new System.Drawing.Size(49, 15);
             this.label_alamat.TabIndex = 8;
             this.label_alamat.Text = "Alamat";
             // 
             // label_nohp
             // 
             this.label_nohp.AutoSize = true;
+            this.label_nohp.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label_nohp.Location = new System.Drawing.Point(6, 62);
             this.label_nohp.Name = "label_nohp";
-            this.label_nohp.Size = new System.Drawing.Size(42, 15);
+            this.label_nohp.Size = new System.Drawing.Size(43, 15);
             this.label_nohp.TabIndex = 9;
             this.label_nohp.Text = "No Hp";
             this.label_nohp.Click += new System.EventHandler(this.label7_Click);
             // 
             // input_nama
             // 
+            this.input_nama.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.input_nama.Location = new System.Drawing.Point(74, 30);
             this.input_nama.Name = "input_nama";
             this.input_nama.PlaceholderText = "Nama Anda..";
@@ -173,6 +181,7 @@
             // 
             // input_alamat
             // 
+            this.input_alamat.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.input_alamat.Location = new System.Drawing.Point(74, 88);
             this.input_alamat.Multiline = true;
             this.input_alamat.Name = "input_alamat";
@@ -182,6 +191,7 @@
             // 
             // input_nohp
             // 
+            this.input_nohp.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.input_nohp.Location = new System.Drawing.Point(74, 59);
             this.input_nohp.Name = "input_nohp";
             this.input_nohp.PlaceholderText = "NoHp..";
@@ -196,6 +206,7 @@
             this.groupBox1.Controls.Add(this.input_nohp);
             this.groupBox1.Controls.Add(this.label_nohp);
             this.groupBox1.Controls.Add(this.input_nama);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(52, 93);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(286, 170);
@@ -218,7 +229,8 @@
             this.groupBox2.Controls.Add(this.submit);
             this.groupBox2.Controls.Add(this.input_note);
             this.groupBox2.Controls.Add(this.label_note);
-            this.groupBox2.Location = new System.Drawing.Point(416, 104);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Location = new System.Drawing.Point(416, 244);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(372, 367);
             this.groupBox2.TabIndex = 15;
@@ -230,7 +242,7 @@
             // 
             this.groupBox3.Controls.Add(this.MakananOption);
             this.groupBox3.Controls.Add(this.MinumanOption);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.Location = new System.Drawing.Point(40, 22);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(276, 46);
@@ -287,45 +299,54 @@
             // 
             // input_diskon
             // 
-            this.input_diskon.Location = new System.Drawing.Point(143, 11);
+            this.input_diskon.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.input_diskon.Location = new System.Drawing.Point(151, 11);
+            this.input_diskon.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.input_diskon.Name = "input_diskon";
-            this.input_diskon.Size = new System.Drawing.Size(52, 23);
+            this.input_diskon.Size = new System.Drawing.Size(49, 23);
             this.input_diskon.TabIndex = 33;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(3, 11);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 21);
+            this.label6.Size = new System.Drawing.Size(92, 15);
             this.label6.TabIndex = 32;
             this.label6.Text = "Diskon Member";
             // 
             // label_takeaway
             // 
             this.label_takeaway.AutoSize = true;
-            this.label_takeaway.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_takeaway.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label_takeaway.Location = new System.Drawing.Point(31, 128);
             this.label_takeaway.Name = "label_takeaway";
-            this.label_takeaway.Size = new System.Drawing.Size(78, 21);
+            this.label_takeaway.Size = new System.Drawing.Size(63, 15);
             this.label_takeaway.TabIndex = 30;
             this.label_takeaway.Text = "TakeAway";
             // 
             // input_jumlah
             // 
+            this.input_jumlah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.input_jumlah.Location = new System.Drawing.Point(172, 74);
+            this.input_jumlah.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.input_jumlah.Name = "input_jumlah";
-            this.input_jumlah.Size = new System.Drawing.Size(144, 23);
+            this.input_jumlah.Size = new System.Drawing.Size(44, 23);
             this.input_jumlah.TabIndex = 29;
+            this.input_jumlah.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             // 
             // label_jumlah
             // 
             this.label_jumlah.AutoSize = true;
-            this.label_jumlah.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_jumlah.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label_jumlah.Location = new System.Drawing.Point(40, 76);
             this.label_jumlah.Name = "label_jumlah";
-            this.label_jumlah.Size = new System.Drawing.Size(60, 21);
+            this.label_jumlah.Size = new System.Drawing.Size(47, 15);
             this.label_jumlah.TabIndex = 28;
             this.label_jumlah.Text = "Jumlah";
             // 
@@ -333,6 +354,7 @@
             // 
             this.nonmember_option.AutoSize = true;
             this.nonmember_option.Checked = true;
+            this.nonmember_option.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.nonmember_option.Location = new System.Drawing.Point(253, 252);
             this.nonmember_option.Name = "nonmember_option";
             this.nonmember_option.Size = new System.Drawing.Size(98, 19);
@@ -345,6 +367,7 @@
             // member_option
             // 
             this.member_option.AutoSize = true;
+            this.member_option.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.member_option.Location = new System.Drawing.Point(172, 252);
             this.member_option.Name = "member_option";
             this.member_option.Size = new System.Drawing.Size(70, 19);
@@ -365,6 +388,7 @@
             // 
             // input_takeaway
             // 
+            this.input_takeaway.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.input_takeaway.FormattingEnabled = true;
             this.input_takeaway.Items.AddRange(new object[] {
             "Makan Ditempat",
@@ -378,16 +402,17 @@
             // label_kcustomer
             // 
             this.label_kcustomer.AutoSize = true;
-            this.label_kcustomer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_kcustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label_kcustomer.Location = new System.Drawing.Point(16, 249);
             this.label_kcustomer.Name = "label_kcustomer";
-            this.label_kcustomer.Size = new System.Drawing.Size(144, 21);
+            this.label_kcustomer.Size = new System.Drawing.Size(115, 15);
             this.label_kcustomer.TabIndex = 23;
             this.label_kcustomer.Text = "Kategori Pelanggan";
             // 
             // submit
             // 
             this.submit.BackColor = System.Drawing.Color.DodgerBlue;
+            this.submit.FlatAppearance.BorderSize = 0;
             this.submit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.submit.Location = new System.Drawing.Point(16, 315);
             this.submit.Name = "submit";
@@ -399,6 +424,7 @@
             // 
             // input_note
             // 
+            this.input_note.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.input_note.Location = new System.Drawing.Point(172, 184);
             this.input_note.Multiline = true;
             this.input_note.Name = "input_note";
@@ -409,16 +435,17 @@
             // label_note
             // 
             this.label_note.AutoSize = true;
-            this.label_note.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_note.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label_note.Location = new System.Drawing.Point(16, 191);
             this.label_note.Name = "label_note";
-            this.label_note.Size = new System.Drawing.Size(138, 21);
+            this.label_note.Size = new System.Drawing.Size(114, 15);
             this.label_note.TabIndex = 20;
             this.label_note.Text = "Catatan Tambahan";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 305);
             this.dataGridView1.Name = "dataGridView1";
@@ -429,17 +456,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(182, 266);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(163, 274);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 28);
+            this.label1.Size = new System.Drawing.Size(75, 28);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Bukti";
+            this.label1.Text = "STRUK";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // tablefoods
             // 
             this.tablefoods.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tablefoods.BackgroundColor = System.Drawing.SystemColors.Window;
             this.tablefoods.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tablefoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablefoods.Location = new System.Drawing.Point(801, 159);
@@ -451,18 +479,19 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.harga_input_item_select);
             this.panel1.Controls.Add(this.label_harga_item_select);
             this.panel1.Controls.Add(this.label_item_select);
             this.panel1.Controls.Add(this.name_input_item_select);
-            this.panel1.Location = new System.Drawing.Point(427, 490);
+            this.panel1.Location = new System.Drawing.Point(421, 117);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(361, 121);
             this.panel1.TabIndex = 21;
             // 
             // harga_input_item_select
             // 
+            this.harga_input_item_select.BackColor = System.Drawing.SystemColors.Window;
             this.harga_input_item_select.Location = new System.Drawing.Point(175, 71);
             this.harga_input_item_select.Name = "harga_input_item_select";
             this.harga_input_item_select.ReadOnly = true;
@@ -492,6 +521,7 @@
             // 
             // name_input_item_select
             // 
+            this.name_input_item_select.BackColor = System.Drawing.SystemColors.Window;
             this.name_input_item_select.Location = new System.Drawing.Point(175, 22);
             this.name_input_item_select.Name = "name_input_item_select";
             this.name_input_item_select.ReadOnly = true;
@@ -502,9 +532,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.BackColor = System.Drawing.SystemColors.Window;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(555, 474);
+            this.label5.Location = new System.Drawing.Point(544, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 21);
             this.label5.TabIndex = 4;
@@ -522,9 +552,10 @@
             // topingcheck2
             // 
             this.topingcheck2.AutoSize = true;
+            this.topingcheck2.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.topingcheck2.Location = new System.Drawing.Point(159, 20);
             this.topingcheck2.Name = "topingcheck2";
-            this.topingcheck2.Size = new System.Drawing.Size(59, 25);
+            this.topingcheck2.Size = new System.Drawing.Size(50, 19);
             this.topingcheck2.TabIndex = 26;
             this.topingcheck2.Text = "Keju";
             this.topingcheck2.UseVisualStyleBackColor = true;
@@ -533,9 +564,10 @@
             // topingcheck3
             // 
             this.topingcheck3.AutoSize = true;
+            this.topingcheck3.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.topingcheck3.Location = new System.Drawing.Point(235, 20);
             this.topingcheck3.Name = "topingcheck3";
-            this.topingcheck3.Size = new System.Drawing.Size(67, 25);
+            this.topingcheck3.Size = new System.Drawing.Size(54, 19);
             this.topingcheck3.TabIndex = 27;
             this.topingcheck3.Text = "Seres";
             this.topingcheck3.UseVisualStyleBackColor = true;
@@ -543,9 +575,10 @@
             // topingcheck1
             // 
             this.topingcheck1.AutoSize = true;
+            this.topingcheck1.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.topingcheck1.Location = new System.Drawing.Point(80, 20);
             this.topingcheck1.Name = "topingcheck1";
-            this.topingcheck1.Size = new System.Drawing.Size(64, 25);
+            this.topingcheck1.Size = new System.Drawing.Size(55, 19);
             this.topingcheck1.TabIndex = 28;
             this.topingcheck1.Text = "Boba";
             this.topingcheck1.UseVisualStyleBackColor = true;
@@ -556,7 +589,7 @@
             this.box_toping.Controls.Add(this.topingcheck2);
             this.box_toping.Controls.Add(this.topingcheck1);
             this.box_toping.Controls.Add(this.topingcheck3);
-            this.box_toping.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.box_toping.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.box_toping.Location = new System.Drawing.Point(817, 43);
             this.box_toping.Name = "box_toping";
             this.box_toping.Size = new System.Drawing.Size(358, 51);
@@ -569,7 +602,7 @@
             // 
             this.box_makanan.Controls.Add(this.input_lvl_makanan);
             this.box_makanan.Enabled = false;
-            this.box_makanan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.box_makanan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.box_makanan.Location = new System.Drawing.Point(817, 96);
             this.box_makanan.Name = "box_makanan";
             this.box_makanan.Size = new System.Drawing.Size(338, 57);
@@ -577,11 +610,22 @@
             this.box_makanan.TabStop = false;
             this.box_makanan.Text = "Level Pedas Makanan";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(2, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1195, 37);
+            this.panel2.TabIndex = 33;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.ClientSize = new System.Drawing.Size(1197, 623);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.box_makanan);
             this.Controls.Add(this.box_toping);
             this.Controls.Add(this.label5);
@@ -592,7 +636,6 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.input_outlit);
             this.Controls.Add(this.label_outlit);
             this.Name = "Form1";
@@ -616,6 +659,8 @@
             this.box_toping.ResumeLayout(false);
             this.box_toping.PerformLayout();
             this.box_makanan.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -667,5 +712,6 @@
         private GroupBox groupBox3;
         private Label label7;
         private NumericUpDown input_diskon;
+        private Panel panel2;
     }
 }
